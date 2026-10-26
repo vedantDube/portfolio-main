@@ -108,201 +108,199 @@ export default function Home() {
             </a>
           </div>
         </div>
+
+        {/* Professional Engineering Spotlight: Cubelelo & FOSSEE (IIT Bombay) */}
+        <div
+          className="experience-spotlight reveal"
+          style={{
+            margin: "0 0 70px",
+            borderBottom: "1px solid var(--line)",
+            paddingBottom: "60px",
+          }}
+        >
+          <div style={{ marginBottom: "28px" }}>
+            <span className="eyebrow" style={{ color: "var(--accent)" }}>
+              ● PRODUCTION SYSTEMS &amp; OPEN SOURCE ENGINEERING
+            </span>
+            <h3 style={{ fontSize: "clamp(26px, 3.2vw, 40px)", fontWeight: 500, margin: "10px 0 0", letterSpacing: "-1.5px" }}>
+              Engineering at <em>Cubelelo &amp; FOSSEE (IIT Bombay).</em>
+            </h3>
+          </div>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))",
+              gap: "24px",
+            }}
+          >
+            {/* Cubelelo Card */}
+            <article
+              style={{
+                background: "rgba(17, 19, 22, 0.7)",
+                border: "1px solid rgba(255, 255, 255, 0.08)",
+                borderRadius: "8px",
+                padding: "32px",
+                display: "flex",
+                flexDirection: "column",
+                gap: "18px",
+                backdropFilter: "blur(10px)",
+              }}
+            >
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "12px" }}>
+                <div>
+                  <span className="eyebrow" style={{ color: "#7de4eb", fontSize: "9px" }}>
+                    MARKETPLACE AUTOMATION &amp; DATA INFRASTRUCTURE
+                  </span>
+                  <h4 style={{ fontSize: "20px", fontWeight: 500, margin: "6px 0 2px", color: "var(--ink)" }}>
+                    Cubelelo
+                  </h4>
+                  <p style={{ fontSize: "12px", color: "var(--muted)" }}>
+                    Software Engineer Intern (Part-Time) · Raipur, India
+                  </p>
+                </div>
+                <span style={{ fontSize: "10px", color: "#626871", fontFamily: "var(--font-mono)", whiteSpace: "nowrap" }}>
+                  MAY 2026 — PRESENT
+                </span>
+              </div>
+
+              <div style={{ fontSize: "13px", lineHeight: "1.7", color: "#b9bec4", display: "flex", flexDirection: "column", gap: "10px" }}>
+                <p style={{ margin: 0 }}>
+                  • Built a <strong>rules-based classification engine</strong> to auto-categorise returns across 10+ marketplace integrations, replacing manual triage.
+                </p>
+                <p style={{ margin: 0 }}>
+                  • Designed a <strong>normalised Postgres schema (Supabase)</strong> to reconcile order and inventory state across 12+ marketplace APIs with idempotent upsert jobs preventing duplicate records.
+                </p>
+                <p style={{ margin: 0 }}>
+                  • Engineered <strong>Playwright automation</strong> for marketplaces lacking public APIs, handling session persistence and scheduled polling to save <strong>~25 hours/week</strong> of manual work.
+                </p>
+                <p style={{ margin: 0 }}>
+                  • Deployed <strong>15+ backend services</strong> in Next.js and Supabase for real-time warehouse ops, barcode scanning, and inventory tracking.
+                </p>
+              </div>
+
+              <div className="tags" style={{ marginTop: "auto", paddingTop: "12px" }}>
+                {["Next.js", "TypeScript", "SQL", "Supabase", "Playwright", "REST APIs", "GraphQL"].map((s) => (
+                  <span key={s}>{s}</span>
+                ))}
+              </div>
+
+              <div style={{ borderTop: "1px solid rgba(255,255,255,0.06)", paddingTop: "12px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                <span style={{ fontSize: "11px", color: "#7de4eb", fontFamily: "var(--font-mono)" }}>
+                  ⚡ ~25 hrs/week manual triage saved
+                </span>
+                <span style={{ fontSize: "10px", color: "#818d96", fontFamily: "var(--font-mono)" }}>
+                  12+ Marketplace APIs
+                </span>
+              </div>
+            </article>
+
+            {/* FOSSEE IIT Bombay Card */}
+            <article
+              style={{
+                background: "rgba(17, 19, 22, 0.7)",
+                border: "1px solid rgba(255, 255, 255, 0.08)",
+                borderRadius: "8px",
+                padding: "32px",
+                display: "flex",
+                flexDirection: "column",
+                gap: "18px",
+                backdropFilter: "blur(10px)",
+              }}
+            >
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "12px" }}>
+                <div>
+                  <span className="eyebrow" style={{ color: "#cba481", fontSize: "9px" }}>
+                    CFD (OPENFOAM) &amp; LLM INTEGRATION
+                  </span>
+                  <h4 style={{ fontSize: "20px", fontWeight: 500, margin: "6px 0 2px", color: "var(--ink)" }}>
+                    FOSSEE, IIT Bombay
+                  </h4>
+                  <p style={{ fontSize: "12px", color: "var(--muted)" }}>
+                    Part-Time Software Developer · Remote
+                  </p>
+                </div>
+                <span style={{ fontSize: "10px", color: "#626871", fontFamily: "var(--font-mono)", whiteSpace: "nowrap" }}>
+                  MAY 2025 — PRESENT
+                </span>
+              </div>
+
+              <div style={{ fontSize: "13px", lineHeight: "1.7", color: "#b9bec4", display: "flex", flexDirection: "column", gap: "10px" }}>
+                <p style={{ margin: 0 }}>
+                  • Built a <strong>grammar-based extraction parser</strong> converting 100+ OpenFOAM case configurations into structured PyVNT trees, achieving <strong>100% data fidelity</strong> across inconsistent formats.
+                </p>
+                <p style={{ margin: 0 }}>
+                  • Implemented <strong>bi-directional translation</strong> across 5+ OpenFOAM configuration formats.
+                </p>
+                <p style={{ margin: 0 }}>
+                  • Engineered an <strong>RAG pipeline</strong> to interpret free-form CFD config comments and map them to structured PyVNT fields, boosting extraction accuracy by <strong>35%</strong> over regex baselines.
+                </p>
+                <p style={{ margin: 0 }}>
+                  • Automated CFD workflow generation, cutting simulation setup time by <strong>50%</strong> and eliminating configuration errors.
+                </p>
+              </div>
+
+              <div className="tags" style={{ marginTop: "auto", paddingTop: "12px" }}>
+                {["Python", "OpenFOAM", "PyQt", "PyVNT", "Transformers", "RAG", "LLMs"].map((s) => (
+                  <span key={s}>{s}</span>
+                ))}
+              </div>
+
+              <div style={{ borderTop: "1px solid rgba(255,255,255,0.06)", paddingTop: "12px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                <span style={{ fontSize: "11px", color: "#cba481", fontFamily: "var(--font-mono)" }}>
+                  ⚡ 50% setup time reduction · +35% accuracy
+                </span>
+                <span style={{ fontSize: "10px", color: "#818d96", fontFamily: "var(--font-mono)" }}>
+                  100+ Case Configs
+                </span>
+              </div>
+            </article>
+          </div>
+        </div>
+
         <div className="project-list">
           {projects.map((p) => (
-            <div key={p.slug} style={{ display: "contents" }}>
-              {p.slug === "devflow" && (
-                <div
-                  className="experience-spotlight reveal"
-                  style={{
-                    gridColumn: "1 / -1",
-                    margin: "50px 0 30px",
-                    borderTop: "1px solid var(--line)",
-                    paddingTop: "50px",
-                  }}
-                >
-                  <div style={{ marginBottom: "28px" }}>
-                    <span className="eyebrow" style={{ color: "var(--accent)" }}>
-                      ● PRODUCTION SYSTEMS &amp; OPEN SOURCE ENGINEERING
-                    </span>
-                    <h3 style={{ fontSize: "clamp(26px, 3.2vw, 40px)", fontWeight: 500, margin: "10px 0 0", letterSpacing: "-1.5px" }}>
-                      Engineering at <em>Cubelelo &amp; FOSSEE (IIT Bombay).</em>
-                    </h3>
-                  </div>
-
-                  <div
-                    style={{
-                      display: "grid",
-                      gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))",
-                      gap: "24px",
-                    }}
+            <article
+              className={`project project-${p.color} reveal`}
+              key={p.slug}
+            >
+              <ProjectLaptop project={p} />
+              <div className="project-info">
+                <div className="project-meta">
+                  <span>
+                    {p.number} / {p.category}
+                  </span>
+                  <Link
+                    href={`/projects/${p.slug}`}
+                    aria-label={`Read ${p.name} case study`}
+                    className="circle-link"
                   >
-                    {/* Cubelelo Card */}
-                    <article
-                      style={{
-                        background: "rgba(17, 19, 22, 0.7)",
-                        border: "1px solid rgba(255, 255, 255, 0.08)",
-                        borderRadius: "8px",
-                        padding: "32px",
-                        display: "flex",
-                        flexDirection: "column",
-                        gap: "18px",
-                        backdropFilter: "blur(10px)",
-                      }}
-                    >
-                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "12px" }}>
-                        <div>
-                          <span className="eyebrow" style={{ color: "#7de4eb", fontSize: "9px" }}>
-                            MARKETPLACE AUTOMATION &amp; DATA INFRASTRUCTURE
-                          </span>
-                          <h4 style={{ fontSize: "20px", fontWeight: 500, margin: "6px 0 2px", color: "var(--ink)" }}>
-                            Cubelelo
-                          </h4>
-                          <p style={{ fontSize: "12px", color: "var(--muted)" }}>
-                            Software Engineer Intern (Part-Time) · Raipur, India
-                          </p>
-                        </div>
-                        <span style={{ fontSize: "10px", color: "#626871", fontFamily: "var(--font-mono)", whiteSpace: "nowrap" }}>
-                          MAY 2026 — PRESENT
-                        </span>
-                      </div>
-
-                      <div style={{ fontSize: "13px", lineHeight: "1.7", color: "#b9bec4", display: "flex", flexDirection: "column", gap: "10px" }}>
-                        <p style={{ margin: 0 }}>
-                          • Built a <strong>rules-based classification engine</strong> to auto-categorise returns across 10+ marketplace integrations, replacing manual triage.
-                        </p>
-                        <p style={{ margin: 0 }}>
-                          • Designed a <strong>normalised Postgres schema (Supabase)</strong> to reconcile order and inventory state across 12+ marketplace APIs with idempotent upsert jobs preventing duplicate records.
-                        </p>
-                        <p style={{ margin: 0 }}>
-                          • Engineered <strong>Playwright automation</strong> for marketplaces lacking public APIs, handling session persistence and scheduled polling to save <strong>~25 hours/week</strong> of manual work.
-                        </p>
-                        <p style={{ margin: 0 }}>
-                          • Deployed <strong>15+ backend services</strong> in Next.js and Supabase for real-time warehouse ops, barcode scanning, and inventory tracking.
-                        </p>
-                      </div>
-
-                      <div className="tags" style={{ marginTop: "auto", paddingTop: "12px" }}>
-                        {["Next.js", "TypeScript", "SQL", "Supabase", "Playwright", "REST APIs", "GraphQL"].map((s) => (
-                          <span key={s}>{s}</span>
-                        ))}
-                      </div>
-
-                      <div style={{ borderTop: "1px solid rgba(255,255,255,0.06)", paddingTop: "12px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                        <span style={{ fontSize: "11px", color: "#7de4eb", fontFamily: "var(--font-mono)" }}>
-                          ⚡ ~25 hrs/week manual triage saved
-                        </span>
-                        <span style={{ fontSize: "10px", color: "#818d96", fontFamily: "var(--font-mono)" }}>
-                          12+ Marketplace APIs
-                        </span>
-                      </div>
-                    </article>
-
-                    {/* FOSSEE IIT Bombay Card */}
-                    <article
-                      style={{
-                        background: "rgba(17, 19, 22, 0.7)",
-                        border: "1px solid rgba(255, 255, 255, 0.08)",
-                        borderRadius: "8px",
-                        padding: "32px",
-                        display: "flex",
-                        flexDirection: "column",
-                        gap: "18px",
-                        backdropFilter: "blur(10px)",
-                      }}
-                    >
-                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "12px" }}>
-                        <div>
-                          <span className="eyebrow" style={{ color: "#cba481", fontSize: "9px" }}>
-                            CFD (OPENFOAM) &amp; LLM INTEGRATION
-                          </span>
-                          <h4 style={{ fontSize: "20px", fontWeight: 500, margin: "6px 0 2px", color: "var(--ink)" }}>
-                            FOSSEE, IIT Bombay
-                          </h4>
-                          <p style={{ fontSize: "12px", color: "var(--muted)" }}>
-                            Part-Time Software Developer · Remote
-                          </p>
-                        </div>
-                        <span style={{ fontSize: "10px", color: "#626871", fontFamily: "var(--font-mono)", whiteSpace: "nowrap" }}>
-                          MAY 2025 — PRESENT
-                        </span>
-                      </div>
-
-                      <div style={{ fontSize: "13px", lineHeight: "1.7", color: "#b9bec4", display: "flex", flexDirection: "column", gap: "10px" }}>
-                        <p style={{ margin: 0 }}>
-                          • Built a <strong>grammar-based extraction parser</strong> converting 100+ OpenFOAM case configurations into structured PyVNT trees, achieving <strong>100% data fidelity</strong> across inconsistent formats.
-                        </p>
-                        <p style={{ margin: 0 }}>
-                          • Implemented <strong>bi-directional translation</strong> across 5+ OpenFOAM configuration formats.
-                        </p>
-                        <p style={{ margin: 0 }}>
-                          • Engineered an <strong>RAG pipeline</strong> to interpret free-form CFD config comments and map them to structured PyVNT fields, boosting extraction accuracy by <strong>35%</strong> over regex baselines.
-                        </p>
-                        <p style={{ margin: 0 }}>
-                          • Automated CFD workflow generation, cutting simulation setup time by <strong>50%</strong> and eliminating configuration errors.
-                        </p>
-                      </div>
-
-                      <div className="tags" style={{ marginTop: "auto", paddingTop: "12px" }}>
-                        {["Python", "OpenFOAM", "PyQt", "PyVNT", "Transformers", "RAG", "LLMs"].map((s) => (
-                          <span key={s}>{s}</span>
-                        ))}
-                      </div>
-
-                      <div style={{ borderTop: "1px solid rgba(255,255,255,0.06)", paddingTop: "12px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                        <span style={{ fontSize: "11px", color: "#cba481", fontFamily: "var(--font-mono)" }}>
-                          ⚡ 50% setup time reduction · +35% accuracy
-                        </span>
-                        <span style={{ fontSize: "10px", color: "#818d96", fontFamily: "var(--font-mono)" }}>
-                          100+ Case Configs
-                        </span>
-                      </div>
-                    </article>
-                  </div>
-                </div>
-              )}
-
-              <article
-                className={`project project-${p.color} reveal`}
-              >
-                <ProjectLaptop project={p} />
-                <div className="project-info">
-                  <div className="project-meta">
-                    <span>
-                      {p.number} / {p.category}
-                    </span>
-                    <Link
-                      href={`/projects/${p.slug}`}
-                      aria-label={`Read ${p.name} case study`}
-                      className="circle-link"
-                    >
-                      <ArrowUpRight />
-                    </Link>
-                  </div>
-                  <Link href={`/projects/${p.slug}`}>
-                    <h3>{p.name}</h3>
+                    <ArrowUpRight />
                   </Link>
-                  <h4>{p.description}</h4>
-                  <p>{p.summary}</p>
-                  <div className="tags">
-                    {p.stack.slice(0, 5).map((s) => (
-                      <span key={s}>{s}</span>
-                    ))}
-                  </div>
-                  <div className="project-links">
-                    <Link href={`/projects/${p.slug}`}>
-                      Explore case study <ArrowRight size={16} />
-                    </Link>
-                    <a href={p.github} aria-label={`${p.name} source on GitHub`} target="_blank" rel="noopener noreferrer">
-                      <Github size={17} />
-                    </a>
-                    <a href={p.demo} aria-label={`${p.name} live demo`} target="_blank" rel="noopener noreferrer">
-                      <ArrowUpRight size={19} />
-                    </a>
-                  </div>
                 </div>
-              </article>
-            </div>
+                <Link href={`/projects/${p.slug}`}>
+                  <h3>{p.name}</h3>
+                </Link>
+                <h4>{p.description}</h4>
+                <p>{p.summary}</p>
+                <div className="tags">
+                  {p.stack.slice(0, 5).map((s) => (
+                    <span key={s}>{s}</span>
+                  ))}
+                </div>
+                <div className="project-links">
+                  <Link href={`/projects/${p.slug}`}>
+                    Explore case study <ArrowRight size={16} />
+                  </Link>
+                  <a href={p.github} aria-label={`${p.name} source on GitHub`} target="_blank" rel="noopener noreferrer">
+                    <Github size={17} />
+                  </a>
+                  <a href={p.demo} aria-label={`${p.name} live demo`} target="_blank" rel="noopener noreferrer">
+                    <ArrowUpRight size={19} />
+                  </a>
+                </div>
+              </div>
+            </article>
           ))}
         </div>
         <div className="secondary-project reveal">
