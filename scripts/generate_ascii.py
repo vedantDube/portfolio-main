@@ -1,6 +1,7 @@
 import json
 import math
-from PIL import Image, ImageEnhance, ImageOps
+from PIL import Image, ImageOps
+import numpy as np
 
 def create_ascii_frames():
     img_path = "public/images/vedant.jpg"
@@ -24,19 +25,28 @@ def create_ascii_frames():
         top = (h - new_h) // 2
         img_cropped = img.crop((0, top, w, top + new_h))
         
-    # Convert to grayscale and enhance contrast for sharp ASCII portrait
-    gray = ImageOps.grayscale(img_cropped)
-    enhancer = ImageEnhance.Contrast(gray)
-    gray = enhancer.enhance(1.4)
-    enhancer_b = ImageEnhance.Brightness(gray)
-    gray = enhancer_b.enhance(1.05)
+    arr = np.array(img_cropped)
+    r = arr[:, :, 0].astype(float)
+    g = arr[:, :, 1].astype(float)
+    b = arr[:, :, 2].astype(float)
     
-    # Resize to cols x rows
-    resized = gray.resize((cols, rows), Image.Resampling.LANCZOS)
+    # Sky detection: high blue relative to red/green in outdoor daytime photo
+    sky = (b > r + 15) & (b > 150)
+    
+    # Grayscale
+    gray = np.array(ImageOps.grayscale(img_cropped)).astype(float)
+    
+    # On dark theme canvas, subject should pop against dark background
+    # Person, clothes, railing, mountain rocks
+    subject = 255.0 - gray
+    processed = np.where(sky, 0.0, subject * 1.25)
+    processed = np.clip(processed, 0, 255).astype(np.uint8)
+    
+    pil_processed = Image.fromarray(processed)
+    resized = pil_processed.resize((cols, rows), Image.Resampling.LANCZOS)
     
     ramp = " .,:;irsXA253hMHGS#9B&@"
     
-    # Frame 1: standard luminance
     frame1_chars = []
     text_lines = []
     
@@ -44,7 +54,6 @@ def create_ascii_frames():
         line = ""
         for x in range(cols):
             pixel = resized.getpixel((x, y)) # 0..255
-            # normalized 0..1
             norm = pixel / 255.0
             
             # Map to char code 33..123 (90 range)
@@ -52,20 +61,20 @@ def create_ascii_frames():
             code = max(33, min(126, code))
             frame1_chars.append(chr(code))
             
-            # Map to ramp character for plain text fallback
             char_idx = int(norm * (len(ramp) - 1))
             line += ramp[char_idx]
         text_lines.append(line)
         
-    # Frame 2: slight lighting / angle shift for subtle scroll morph
-    # We apply a slight horizontal gradient or edge highlight
+    # Frame 2: slight wave / lighting shift for scroll morph
     frame2_chars = []
     for y in range(rows):
         for x in range(cols):
             pixel = resized.getpixel((x, y))
-            # Shift slightly based on position
-            shift = math.sin(x / 15.0) * 8.0 + math.cos(y / 12.0) * 6.0
-            p2 = max(0, min(255, pixel + shift))
+            if pixel > 5:
+                shift = math.sin(x / 14.0) * 10.0 + math.cos(y / 11.0) * 8.0
+                p2 = max(0, min(255, pixel + shift))
+            else:
+                p2 = 0
             norm2 = p2 / 255.0
             code2 = 33 + int(round(norm2 * 90))
             code2 = max(33, min(126, code2))
