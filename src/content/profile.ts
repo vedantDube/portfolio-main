@@ -38,7 +38,7 @@ export const projects = [
       "GitHub OAuth",
     ],
     github: "https://github.com/vedantDube/flowops",
-    demo: "https://github.com/vedantDube/flowops",
+    demo: "https://flow-ops-liard.vercel.app/",
     problem:
       "Engineering teams suffer velocity bottlenecks from delayed reviews, unmonitored stale PRs, and lack of real-time visibility into developer throughput across repositories.",
     contribution:
@@ -90,7 +90,7 @@ export const projects = [
       "Clerk",
     ],
     github: "https://github.com/vedantDube/cookgpt",
-    demo: "https://github.com/vedantDube/cookgpt",
+    demo: "https://cook-gpt-azure.vercel.app/",
     problem:
       "Cooking assistants struggle with photo queries of raw ingredients, fail to offer sub-second latency, and lack grounded dietary reasoning over large recipe collections.",
     contribution:
@@ -140,7 +140,7 @@ export const projects = [
       "Tailwind CSS",
     ],
     github: "https://github.com/vedantDube",
-    demo: "https://github.com/vedantDube",
+    demo: "https://devflow-six-gamma.vercel.app/",
     problem:
       "Developers lose hours each week switching context between fragmented tools for issue tracking, branch coordination, and deployment visibility.",
     contribution:
