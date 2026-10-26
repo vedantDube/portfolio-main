@@ -1,18 +1,19 @@
 export const profile = {
   name: "Vedant Dubey",
   tagline:
-    "NIT Raipur ECE ’27 | Full Stack Developer & AI/ML Engineer | Building Scalable Systems & Multimodal AI Tooling",
+    "NIT Raipur ECE ’27 | Full Stack Developer & AI/ML Engineer | Building Scalable Systems, Autonomous RAG & High-Throughput Pipelines",
   vision:
     "Engineering high-throughput full-stack platforms, autonomous agent workflows, and intelligent developer tools that deliver real-world impact.",
   contactPrompt:
     "Have a software engineering challenge, an AI/ML collaboration, or an SDE opportunity to discuss? Let’s connect.",
   email: "vedhem999@gmail.com",
+  phone: "+91-8770824276",
   github: "https://github.com/vedantDube",
   linkedin: "https://www.linkedin.com/in/vedant-dubey-55a934287/",
   codeforces: "https://github.com/vedantDube",
-  leetcode: "https://github.com/vedantDube",
-  codechef: "https://github.com/vedantDube",
-  location: "Based in India · Open to Remote & Relocation",
+  leetcode: "https://leetcode.com/u/vedantDube/",
+  codechef: "https://www.codechef.com/users/vedantDube",
+  location: "Raipur, India · Open to Remote & Relocation",
   college: "National Institute of Technology Raipur",
 };
 
@@ -23,9 +24,9 @@ export const projects = [
     category: "ENGINEERING INTELLIGENCE & SAAS",
     number: "01",
     color: "cyan",
-    description: "Real-time engineering intelligence and automated PR reviews.",
+    description: "Real-time engineering intelligence, automated PR reviews & Git analytics.",
     summary:
-      "A multi-tenant SaaS platform ingesting GitHub commits, pull requests, and code reviews via OAuth and webhooks to surface real-time metrics, detect anti-patterns, and automate approvals.",
+      "A multi-tenant SaaS platform ingesting GitHub commits, pull requests, and reviews via OAuth and webhooks to surface 10+ real-time engineering metrics, detect anti-patterns, and automate code reviews.",
     stack: [
       "Next.js",
       "Express",
@@ -39,34 +40,34 @@ export const projects = [
     github: "https://github.com/vedantDube/flowops",
     demo: "https://github.com/vedantDube/flowops",
     problem:
-      "Engineering teams suffer velocity bottlenecks from delayed code reviews, missed security vulnerabilities, and lack of live visibility into team workflows.",
+      "Engineering teams suffer velocity bottlenecks from delayed reviews, unmonitored stale PRs, and lack of real-time visibility into developer throughput across repositories.",
     contribution:
-      "Engineered the GitHub webhook ingestion pipeline, automated AI review system for security/anti-pattern detection, 4-tier Role-Based Access Control (RBAC), and real-time dashboard updates over Socket.io.",
+      "Engineered the GitHub webhook ingestion pipeline, automated AI review pipeline (Gemini/LangChain) with security & anti-pattern detection, PR automation engine with Slack/email nudges reducing turnaround by 40%, 4-tier RBAC, and real-time dashboard updates via Socket.io.",
     flow: [
       "GitHub Webhooks",
       "Express Ingestion",
       "PostgreSQL + Prisma",
-      "AI Review Pipeline",
+      "Gemini AI Review Engine",
       "Live Dashboard / Socket.io",
     ],
     details: [
       [
-        "Real-time Ingestion & Webhooks",
-        "Secure GitHub OAuth and webhook listeners ingest PRs, commits, and comments with deduplication and verified payloads.",
+        "Real-Time Webhook Ingestion",
+        "Ingests GitHub commits, PRs, and comments with cryptographic signature verification and idempotent processing.",
       ],
       [
-        "Automated AI Review Engine",
-        "Scans incoming PR diffs for security anti-patterns, potential regressions, and automatically nudges stale reviews while auto-approving low-risk changes.",
+        "Automated AI Review Pipeline",
+        "Detects security vulnerabilities and anti-patterns in diffs, suggests automated refactors, and auto-approves verified low-risk changes.",
       ],
       [
-        "Multi-Tenant RBAC & Live Sync",
-        "4-tier role-based access control with live WebSocket event streaming keeps distributed teams synchronized without polling.",
+        "4-Tier RBAC & Real-Time Sync",
+        "Multi-tenant organization architecture with secure httpOnly cookie session auth and live WebSocket event streams.",
       ],
     ],
     tradeoff:
-      "Synchronous webhook processing creates latency bottlenecks; decoupling ingestion from AI evaluation enables instant GitHub acknowledgment while background workers process intensive diff analyses.",
+      "Decoupling webhook acknowledgment from deep LLM diff analysis prevents GitHub timeouts while background workers handle intensive refactor generation.",
     result:
-      "Production-ready architecture handling concurrent webhooks with sub-second event ingestion, real-time WebSocket broadcasting, and automated security checks across repositories.",
+      "Reduced PR turnaround time by 40% with real-time Slack/email nudges, 10+ live metrics, and weekly 'time saved' impact digests for engineering managers.",
     visual: "flow",
   },
   {
@@ -79,12 +80,13 @@ export const projects = [
     summary:
       "A 1st-place hackathon winning multimodal culinary chatbot that answers complex recipe and nutrition queries from text and images using Pinecone vector search and Google Gemini.",
     stack: [
-      "React",
-      "Flask",
       "Python",
+      "Flask",
       "LangChain",
       "Pinecone",
       "Google Gemini",
+      "React",
+      "TailwindCSS",
       "Clerk",
     ],
     github: "https://github.com/vedantDube/cookgpt",
@@ -92,7 +94,7 @@ export const projects = [
     problem:
       "Cooking assistants struggle with photo queries of raw ingredients, fail to offer sub-second latency, and lack grounded dietary reasoning over large recipe collections.",
     contribution:
-      "Built multimodal vision-to-recipe pipeline using Google Gemini, scaled vector retrieval over 10,000+ embeddings in Pinecone, implemented Flask streaming responses, and integrated Clerk user authentication.",
+      "Built multimodal vision-to-recipe pipeline using Google Gemini, scaled vector retrieval over 10,000+ embeddings in Pinecone, implemented Flask streaming responses with 30% higher response accuracy, and integrated Clerk user authentication.",
     flow: [
       "User Image / Query",
       "Flask API",
@@ -117,7 +119,7 @@ export const projects = [
     tradeoff:
       "Pure vector similarity can overlook exact ingredient quantity constraints; hybrid retrieval with metadata filtering ensures nutritional precision while preserving conversational fluency.",
     result:
-      "Awarded 1st place in hackathon competition for best multimodal execution, low latency streaming responses, and seamless photo-based ingredient analysis.",
+      "Awarded 1st place in Hack-o-Harbour / AI Hackathon for best multimodal execution, sub-second latency streaming responses, and 30% accuracy boost.",
     visual: "chat",
   },
   {
@@ -176,58 +178,59 @@ export type Project = (typeof projects)[number];
 
 export const experience = [
   {
-    date: "2024 — PRESENT",
-    title: "Data pipelines & automation at scale.",
-    role: "AI & Operations Developer · Cubelelo",
-    text: "Building automated data processing pipelines, integrating LLM-assisted tools for operations, and optimizing internal engineering workflows.",
+    date: "MAY 2026 — PRESENT",
+    title: "Reconciliation, automation & marketplace integrations.",
+    role: "Software Engineer Intern (Part-Time) · Cubelelo",
+    text: "Built rules-based classification engine for returns across 10+ marketplaces, normalized Supabase Postgres schemas with idempotent upserts, and built Playwright session automations saving ~25 hrs/week.",
   },
   {
-    date: "2024",
-    title: "Open-source engineering tools.",
-    role: "Software Developer · FOSSEE CFD, IIT Bombay",
-    text: "Contributed to open-source scientific computation workflows, developing robust data processing pipelines and engineering software tools.",
+    date: "MAY 2025 — PRESENT",
+    title: "CFD (OpenFOAM) parser & RAG integration.",
+    role: "Software Developer (Part-Time) · FOSSEE, IIT Bombay",
+    text: "Engineered grammar-based extraction parser converting 100+ OpenFOAM case configs to PyVNT with 100% fidelity, and built RAG pipeline improving CFD comment extraction by 35% and cutting setup time by 50%.",
   },
   {
-    date: "2024",
-    title: "1st Place Winner.",
-    role: "Hackathon Winner · CookGPT",
-    text: "Won 1st place building CookGPT, a multimodal culinary AI engine utilizing Google Gemini, Pinecone vector search, and streaming RAG.",
+    date: "2025 — 2026",
+    title: "Hackathons, research & high-speed RAG.",
+    role: "Winner · Hack-o-Harbour & Runner-Up · Codeutsav 8.0",
+    text: "Won 1st Place at Hack-o-Harbour (150+ teams) with CookGPT; Runner-Up at Codeutsav 8.0 (300+ teams); Co-authored IEEE paper on Multi-Actor DRL with LLM for Sparse Hybrid RIS-IAB Networks.",
   },
   {
     date: "2023 — 2027",
-    title: "Foundations in systems and communication.",
+    title: "Foundations in electronics, algorithms and systems.",
     role: "B.Tech Electronics & Communication Engineering · NIT Raipur",
-    text: "Algorithms, distributed systems, digital communication, and computer networks. Expected graduation in 2027.",
+    text: "Algorithms, distributed systems, digital communication, and computer networks. Expected graduation in 2027. Selected for Amazon ML Summer School 2026.",
   },
 ];
 
 export const skills = [
   {
     name: "Languages",
-    items: "TypeScript · JavaScript · Python · C++ · SQL · HTML/CSS",
-    use: "Full-stack engineering, algorithms, and AI/ML pipeline development.",
+    items: "TypeScript · JavaScript · Python · C/C++ · SQL · HTML/CSS",
+    use: "Full-stack web engineering, distributed systems, and AI/ML model pipelines.",
   },
   {
-    name: "Full Stack & Backend",
+    name: "Frameworks & Backend",
     items:
-      "Next.js · React · Node.js · Express · Flask · PostgreSQL · Prisma · MongoDB · Socket.io",
-    use: "FlowOps real-time intelligence, CookGPT backend services, and scalable web apps.",
+      "Next.js · React.js · Node.js · Express.js · Flask · Supabase · PostgreSQL · Prisma · MongoDB · GraphQL · REST APIs",
+    use: "FlowOps SaaS architecture, Cubelelo warehouse systems, and CookGPT services.",
   },
   {
     name: "AI / ML & Retrieval",
     items:
-      "LangChain · Pinecone · Google Gemini APIs · Vector Databases · Multimodal Reasoning · RAG Architectures",
-    use: "CookGPT culinary intelligence, sub-second vector search, and LLM automation.",
+      "LangChain · HuggingFace Transformers · PyTorch · Pinecone · RAG Architectures · Google Gemini API · LLMs · Vector Search",
+    use: "CookGPT multimodal vision, sub-second vector RAG, and FOSSEE CFD config extraction.",
   },
   {
-    name: "DevOps & Cloud",
-    items: "Docker · Git · GitHub Actions · CI/CD Pipelines · Linux · REST APIs",
-    use: "Containerized deployments, automated PR review workflows, and repeatable environments.",
-  },
-  {
-    name: "Engineering Practices",
+    name: "DevOps & Developer Tools",
     items:
-      "Systems Thinking · Problem Decomposition · Cross-Functional Collaboration · Real-Time Event Handling",
-    use: "Building clean, maintainable systems with robust testing and real-time observability.",
+      "Docker · CI/CD Pipelines · Playwright · Git & GitHub · Linux · AWS (EC2, S3) · OpenFOAM · Jest · Pytest",
+    use: "Playwright session automation, containerized microservices, and automated testing.",
+  },
+  {
+    name: "Achievements & Honors",
+    items:
+      "Winner, Hack-o-Harbour 2025 (150+ teams) · Runner-Up, Codeutsav 8.0 (300+ teams) · Selected for Amazon ML Summer School 2026 · IEEE Research Paper Under Review",
+    use: "Proven execution in high-pressure hackathons and rigorous academic research.",
   },
 ];

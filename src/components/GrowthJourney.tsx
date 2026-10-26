@@ -204,9 +204,9 @@ export default function GrowthJourney() {
       </div>
 
       <div className="dashboard-footnote">
-        <span>Cubelelo AI &amp; Operations</span>
-        <span>FOSSEE CFD · IIT Bombay Contributor</span>
-        <span>Hackathon 1st Place Winner</span>
+        <span>Winner · Hack-o-Harbour (150+ teams)</span>
+        <span>Runner-Up · Codeutsav 8.0 (300+ teams)</span>
+        <span>Selected · Amazon ML Summer School 2026</span>
       </div>
     </div>
   );

@@ -204,7 +204,7 @@ export default function PortfolioTerminal() {
         break;
       case "achievements":
         text =
-          "• 1st Place Winner, AI Hackathon (CookGPT Multimodal AI)\n• AI & Operations Developer, Cubelelo\n• Open Source Contributor, FOSSEE CFD (IIT Bombay)\n• FlowOps SaaS Platform Developer";
+          "• Winner, Hack-o-Harbour 2025 (IIIT Naya Raipur, 150+ teams)\n• Runner-Up, Codeutsav 8.0 (Central India's Largest Hackathon, 300+ teams)\n• Selected for Amazon ML Summer School 2026\n• Co-Author, IEEE Research Paper: Multi-Actor DRL with LLM for Sparse Hybrid RIS-IAB Networks\n• 450+ DSA problems solved across LeetCode & CodeChef";
         break;
       case "contact":
         text = `Email: ${profile.email}\nGitHub: ${profile.github}\nLinkedIn: ${profile.linkedin}\nLocation: ${profile.location}`;
