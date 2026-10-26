@@ -43,11 +43,17 @@ export default function ProjectLaptop({ project }: { project: Project }) {
       <div className="laptop-stage">
         <div className="macbook-screen">
           <div className="macbook-camera" aria-hidden="true" />
-          <div className="laptop-browser">
+          <a
+            className="laptop-browser"
+            href={project.demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            title={`Open ${project.name} live website in a new tab`}
+          >
             <span aria-hidden="true">● ● ●</span>
             <span>{new URL(project.demo).hostname}</span>
             <ArrowUpRight size={9} />
-          </div>
+          </a>
           <div className="laptop-display" ref={display}>
             <Image
               src={`/images/projects/${project.slug}.webp`}
@@ -63,7 +69,8 @@ export default function ProjectLaptop({ project }: { project: Project }) {
                   title={`${project.name} live website preview`}
                   src={project.demo}
                   loading="lazy"
-                  sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+                  allow="camera; microphone; clipboard-write;"
+                  sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-modals"
                   referrerPolicy="no-referrer"
                   onLoad={() => setLoaded(true)}
                 />
@@ -71,7 +78,7 @@ export default function ProjectLaptop({ project }: { project: Project }) {
             </>
             {live && !loaded && (
               <span className="laptop-loading" role="status">
-                Opening live website…
+                Loading live website into laptop…
               </span>
             )}
           </div>
@@ -83,24 +90,36 @@ export default function ProjectLaptop({ project }: { project: Project }) {
         <div className="laptop-shadow" aria-hidden="true" />
       </div>
       <div className="laptop-actions">
+        <a
+          className="laptop-btn-primary"
+          href={project.demo}
+          target="_blank"
+          rel="noopener noreferrer"
+          title={`Open ${project.name} live website in a new tab`}
+        >
+          Open live website <ArrowUpRight size={13} />
+        </a>
         <button
+          className="laptop-btn-secondary"
           aria-pressed={live}
           onClick={() => {
             setLive(!live);
             setLoaded(false);
           }}
+          title={
+            live
+              ? "Switch back to static capture"
+              : "Embed and interact with live website directly inside this laptop"
+          }
         >
           {live ? <ImageIcon size={13} /> : <Play size={13} />}{" "}
-          {live ? "Show captured screen" : "Open live website"}
+          {live ? "Show screenshot" : "Interactive iframe"}
         </button>
-        <a href={project.demo} target="_blank" rel="noopener noreferrer">
-          Full demo <ArrowUpRight size={13} />
-        </a>
       </div>
       <div className="laptop-source">
         <span>
           {live
-            ? "LIVE EMBED / USE FULL DEMO IF EMBEDDING IS BLOCKED"
+            ? "LIVE IFRAME ACTIVE · USE 'OPEN LIVE WEBSITE' FOR FULL BROWSER TAB"
             : "ACTUAL WEBSITE CAPTURE / OCT 2026"}
         </span>
         <Link href={`/projects/${project.slug}`} data-view>

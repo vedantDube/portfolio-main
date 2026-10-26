@@ -4434,6 +4434,12 @@ a {
   border-radius: 2px 2px 0 0;
   color: #9aa8b5;
   border-bottom: 1px solid #ffffff12;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+a.laptop-browser:hover {
+  background: #252c36;
+  color: #dbe8f2;
 }
 .laptop-browser > span:first-child {
   font-size: 5px;
@@ -4541,21 +4547,39 @@ a {
   align-items: center;
   gap: 8px;
   font-size: 10px;
-  min-height: 39px;
-}
-.laptop-actions > button {
-  border: 1px solid #7de4eb35;
-  background: #7de4eb06;
-  color: #abcbd0;
-  padding: 0 12px;
+  min-height: 38px;
+  padding: 0 14px;
   border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
-.laptop-actions > button:hover {
+.laptop-actions > a.laptop-btn-primary {
+  border: 1px solid #7de4eb88;
+  background: #7de4eb18;
+  color: #7de4eb;
+  font-weight: 500;
+}
+.laptop-actions > a.laptop-btn-primary:hover {
+  border-color: #7de4eb;
+  background: #7de4eb28;
+  color: #ffffff;
+  box-shadow: 0 0 14px #7de4eb44;
+}
+.laptop-actions > button.laptop-btn-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: #9eb0bb;
+}
+.laptop-actions > button.laptop-btn-secondary:hover {
+  border-color: rgba(125, 228, 235, 0.5);
+  background: rgba(125, 228, 235, 0.08);
+  color: #ffffff;
+}
+.laptop-actions > button.laptop-btn-secondary[aria-pressed="true"] {
   border-color: var(--accent);
-  background: #7de4eb12;
-}
-.laptop-actions > a {
-  color: #8fa3b0;
+  background: rgba(125, 228, 235, 0.14);
+  color: var(--accent);
 }
 .laptop-source {
   display: flex;
