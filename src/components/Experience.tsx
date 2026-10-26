@@ -132,7 +132,7 @@ export function Navigation() {
             AI &amp; Operations at Cubelelo · FOSSEE CFD (IIT Bombay) · 1st Place Hackathon Winner
           </dd>
           <dt>Selected work</dt>
-          <dd>FlowOps · CookGPT · DevFlow</dd>
+          <dd>FlowOps · CookGPT</dd>
           <dt>Proof of work</dt>
           <dd>
             Hackathon 1st Place · 10,000+ Vector RAG Index · Real-Time Webhooks &amp; RBAC

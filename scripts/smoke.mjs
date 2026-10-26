@@ -7,7 +7,8 @@ const routes = [
   ["/", 200],
   ["/projects/flowops", 200],
   ["/projects/cookgpt", 200],
-  ["/projects/devflow", 200],
+  // ["/projects/devflow", 200], // commented out per user request
+  ["/projects/devflow", 404],
   ["/projects/unknown", 404],
   ["/resume.pdf", 200],
   ["/robots.txt", 200],
@@ -28,7 +29,7 @@ for (const [route, status] of routes) {
       "DUBEY",
       "FlowOps",
       "CookGPT",
-      "DevFlow",
+      // "DevFlow", // commented out per user request
       "vedhem999@gmail.com",
       "NIT Raipur ECE",
       "application/ld+json",

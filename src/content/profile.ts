@@ -122,6 +122,7 @@ export const projects = [
       "Awarded 1st place in Hack-o-Harbour / AI Hackathon for best multimodal execution, sub-second latency streaming responses, and 30% accuracy boost.",
     visual: "chat",
   },
+  /*
   {
     slug: "devflow",
     name: "DevFlow",
@@ -172,6 +173,7 @@ export const projects = [
       "High performance developer portal featured on Devpost, with rapid response times and consistent developer-first ergonomics.",
     visual: "research",
   },
+  */
 ] as const;
 
 export type Project = (typeof projects)[number];

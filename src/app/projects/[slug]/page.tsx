@@ -94,9 +94,7 @@ export default async function ProjectPage({
           <p>
             {project.slug === "flowops"
               ? "GitHub OAuth and webhooks stream commits and pull requests. Background workers analyze diffs for security anti-patterns while Socket.io synchronizes real-time metrics across team dashboards."
-              : project.slug === "cookgpt"
-                ? "User image and text queries are processed through Gemini multimodal vision and matched against 10,000+ Pinecone recipe vectors with sub-second streaming answers."
-                : "Developer actions trigger automated CI/CD pipelines, Docker containerized builds, and PostgreSQL persistence with end-to-end telemetry."}
+              : "User image and text queries are processed through Gemini multimodal vision and matched against 10,000+ Pinecone recipe vectors with sub-second streaming answers."}
           </p>
         </div>
       </section>

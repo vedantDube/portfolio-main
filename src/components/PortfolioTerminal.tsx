@@ -37,7 +37,6 @@ const commands = [
   "resume",
   "open flowops",
   "open cookgpt",
-  "open devflow",
   "history",
   "clear",
 ];
@@ -135,7 +134,7 @@ export default function PortfolioTerminal() {
             ? "vedant/"
             : path === "~/vedant"
               ? "about.txt  vision.txt  contact.txt  projects/  skills.json  resume.pdf"
-              : "flowops/  cookgpt/  devflow/";
+              : "flowops/  cookgpt/";
         break;
       case "cd": {
         if (!arg || arg === "~" || arg === "/home/visitor") {
